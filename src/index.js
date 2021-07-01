@@ -97,7 +97,7 @@ class Main extends React.Component{
 	};
 	
 	async fetchStockData(symbolsString){
-		const response = await fetch("https://cloud.iexapis.com/stable/stock/market/batch?types=quote&symbols=" + symbolsString + "&token=" + API_KEY);
+		const response = await fetch("https://cloud.iexapis.com/stable/stock/market/batch?types=quote&symbols=" + symbolsString + "&token=" + process.env.API_KEY);
 		
 		if(!response.ok){
 			const message = "An error has occured.";
