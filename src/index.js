@@ -98,7 +98,7 @@ class Main extends React.Component{
 	
 	async fetchStockData(symbolsString){
 		const { REACT_APP_APIKEY } = process.env;
-		const response = await fetch("https://cloud.iexapis.com/stable/stock/market/batch?types=quote&symbols=" + symbolsString + "&token=" + process.env.APIKEY);
+		const response = await fetch("https://cloud.iexapis.com/stable/stock/market/batch?types=quote&symbols=" + symbolsString + "&token=" + process.env.REACT_APP_APIKEY);
 		
 		if(!response.ok){
 			const message = "An error has occured.";
